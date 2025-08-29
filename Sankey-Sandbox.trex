@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <worksheet-extension id="com.tableau.extension.sankey" extension-version="1.5.0">
+    <default-locale>en_US</default-locale>
+    <name resource-id="name"/>
+    <description>Visualisation of flows between nodes (levels) with proportionally sized edges.</description>
+    <author name="tableau" email="github@tableau.com" organization="tableau" website="https://www.tableau.com"/>
+    <min-api-version>1.11</min-api-version>
+    <source-location>
+      <url> https://extensions.tableauusercontent.com/sandbox/sankey/sankey.html</url>
+    </source-location>
+    <icon/>
+    <context-menu>
+      <configure-context-menu-item />
+    </context-menu>
+    <encoding id="level">
+      <display-name resource-id="level-id">Level</display-name>
+      <role-spec>
+        <role-type>discrete-dimension</role-type>
+        <role-type>discrete-measure</role-type>
+      </role-spec>
+      <fields max-count="5"/>
+      <encoding-icon token="level" />
+      <tooltip resource-id="level-id">Level</tooltip>
+    </encoding>
+    <encoding id="edge">
+      <display-name resource-id="edge-id">Link</display-name>
+      <role-spec>
+        <role-type>continuous-measure</role-type>
+        <role-type>continuous-dimension</role-type>
+      </role-spec>
+      <fields max-count="1"/>
+      <encoding-icon token="edge" />
+      <tooltip resource-id="edge-id">Edge</tooltip>
+    </encoding>
+  </worksheet-extension>
+  <resources>
+	<resource id="name">
+      <text locale="en_US">Sankey</text>
+      <text locale="zh_CN">桑基图</text>
+      <text locale="ja_JP">サンキー</text>
+    </resource>
+    <resource id="level-id">
+      <text locale="en_US">Level</text>
+      <text locale="en_GB">Level</text>
+      <text locale="de_DE">Ebene</text>
+      <text locale="fr_FR">niveau</text>
+      <text locale="fr_CA">niveau</text>
+      <text locale="pt_BR">nível</text>
+      <text locale="es_ES">nivel</text>
+      <text locale="it_IT">livello</text>
+      <text locale="ja_JP">レベル</text>
+      <text locale="ko_KR">레벨</text>
+      <text locale="zh_CN">级别</text>
+      <text locale="zh_TW">級別</text>
+      <text locale="sv_SE">nivå</text>
+      <text locale="th_TH">ระดับ</text>
+    </resource>
+    <resource id="edge-id">
+      <text locale="en_GB">Link</text>
+      <text locale="en_US">Link</text>
+      <text locale="de_DE">Verbindungen</text>
+      <text locale="fr_FR">Lien</text>
+      <text locale="fr_CA">Lien</text>
+      <text locale="pt_BR">Elos</text>
+      <text locale="es_ES">Vínculos</text>
+      <text locale="it_IT">Collegamento</text>
+      <text locale="ja_JP">リンク</text>
+      <text locale="ko_KR">링크</text>
+      <text locale="zh_CN">链接</text>
+      <text locale="zh_TW">連結</text>
+      <text locale="sv_SE">länkar</text>
+      <text locale="th_TH">ลิงก์</text>
+    </resource>
+  </resources>
+</manifest>
